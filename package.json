@@ -1,0 +1,18 @@
+{
+  "name": "gentle-world-vr-site",
+  "version": "1.0.0",
+  "description": "One‑page website for the Gentle World VR experience",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Remind VR Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
