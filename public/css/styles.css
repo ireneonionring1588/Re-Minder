@@ -5,18 +5,25 @@
   --bg: #ffffff;
   --pastel-green-blue: #dff2eb;
   --muted-teal-blue: #a3cfc9;
+  --muted-teal-blue-dark: #327667;
 
   --font-body: 'Open Sans', sans-serif;
   --font-heading: 'Lato', sans-serif;
 
   --radius: 16px;
-  --shadow: 0 8px 20px rgba(0,0,0,.07);
-  --shadow-lg: 0 14px 32px rgba(0,0,0,.08);
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 14px 32px rgba(0, 0, 0, 0.08);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: var(--font-body);
@@ -31,20 +38,49 @@ body {
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--blue) 0%, var(--green) 100%);
-  color: var(--text);
-  padding: 6rem 0;
+  background: linear-gradient(to bottom right, var(--blue), var(--green));
   text-align: center;
+  padding: 6rem 1rem 4rem;
+  color: var(--text);
 }
 
 .hero h1 {
   font-family: var(--font-heading);
-  font-size: 2.5rem;
-  margin-bottom: .5rem;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .tagline {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.hero-headset {
+  max-width: 280px;
+  margin: 2rem auto;
+  display: block;
+}
+
+.hero-caption {
+  font-size: 1rem;
+  color: var(--text);
+  margin: 1rem auto 2rem;
+  max-width: 500px;
+}
+
+.cta-button {
+  background-color: #3e8e7e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--muted-teal-blue-dark);
 }
 
 .section {
@@ -55,25 +91,97 @@ body {
   font-family: var(--font-heading);
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-.features {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+.features-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  text-align: center;
 }
 
-.features li::before {
-  content: "\2713\0020";
-  color: var(--muted-teal-blue);
-  font-weight: bold;
-  margin-right: .5rem;
+.features-icons .feature {
+  max-width: 260px;
+  flex: 1 1 220px;
 }
 
-.features li {
-  padding-left: 1.5rem;
-  position: relative;
-  margin-bottom: 0.75rem;
+.features-icons .feature img {
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.features-icons .feature h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.features-icons .feature p {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.vr-controls-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.vr-text {
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.vr-text h2 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.vr-text p {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.vr-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.controls-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.gallery {
+  background-color: var(--pastel-green-blue);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 0 auto;
 }
 
 .quotes blockquote {
@@ -86,8 +194,8 @@ body {
 
 .quotes cite {
   display: block;
-  margin-top: .5rem;
-  font-size: .9rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
@@ -118,20 +226,30 @@ body {
   line-height: 1.4;
 }
 
-.gallery .mockup {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,.1);
-}
-
 .footer {
-  background: linear-gradient(135deg, var(--blue) 0%, var(--green) 100%);
+  background: linear-gradient(135deg, var(--blue), var(--green));
   color: var(--text);
   text-align: center;
   padding: 2rem 1rem;
 }
 
 @media (max-width: 600px) {
-  .hero h1 { font-size: 1.8rem; }
-  .section h2 { font-size: 1.5rem; }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .vr-text,
+  .vr-image {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .vr-text h2,
+  .vr-text p {
+    text-align: center;
+  }
 }
