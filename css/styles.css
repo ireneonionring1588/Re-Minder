@@ -80,6 +80,7 @@ body {
 
 .section {
   padding: 4rem 0;
+  margin-bottom: 4rem;
 }
 
 .section h2 {
@@ -339,7 +340,7 @@ button.next {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 90px;
   flex-wrap: nowrap;
 }
 
