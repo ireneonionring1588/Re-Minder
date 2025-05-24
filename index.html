@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +13,28 @@
 
 <body>
   <header class="hero">
-    <div class="container">
-      <h1>Re-Minder</h1>
-      <p class="tagline">A calming virtual space to support memory, connection, and comfort.</p>
-      <img src="images/HeadsetImg.png" alt="Re-Minder VR Headset" class="hero-headset">
-      <p class="hero-caption">Designed for older adults and caregivers navigating memory loss with compassion.</p>
-      <a href="#overview" class="cta-button">Explore the Experience</a>
+    <div class="hero-video-container">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="images/Your paragraph text (1).mp4" type="video/mp4">
+      </video>
     </div>
+  
   </header>
 
   <main>
 
     <section id="overview" class="section about">
-      <div class="container">
-        <h2>About the Project</h2>
-        <p>We're creating a VR experience designed especially for older adults and anyone concerned about memory loss or Alzheimer's. Set in a tranquil, nature-inspired environment, the space offers gentle interactions—like personalized photo frames, memory games, and interactive objects—that support cognitive function and spark emotional connection.</p>
-      </div>
-    </section>
+  <div class="container">
+    <h2>About the Project</h2>
+    <p>We're creating a VR experience designed especially for older adults and anyone concerned about memory loss or Alzheimer's. Set in a tranquil, nature-inspired environment, the space offers gentle interactions—like personalized photo frames, memory games, and interactive objects—that support cognitive function and spark emotional connection.</p>
+    
+    <div class="about-images">
+      <img src="images/HeadsetImg.png" alt="Calming VR scene" class="about-img left-img">
+      <img src="images/ControllerImg.png" alt="User interacting with VR" class="about-img right-img">
+    </div>
+  </div>
+</section>
+
 
     <section id="features" class="section inside">
       <div class="container">
@@ -64,17 +72,42 @@
           <p>Re-Minder is designed for ease and comfort. Users can interact with the environment using simple hand gestures or intuitive controller inputs. Whether it’s teleporting across the island or gently grabbing keepsakes, everything is optimized for first-time VR users.</p>
         </div>
         <div class="vr-image">
-          <img src="images/VRControls.png" alt="VR controls layout" class="controls-img">
+          <img src="images/guidance.png" alt="VR controls layout" class="controls-img">
         </div>
       </div>
     </section>
 
     <section id="project-display" class="section gallery">
-      <div class="container">
-        <h2>Visual Sneak Peek</h2>
-        <img src="images/Cabin.png" alt="Re-Minder VR cabin environment">
-      </div>
-    </section>
+  <div class="container">
+    <h2>Visual Sneak Peek</h2>
+    <div class="slideshow-container">
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      
+      <img class="slide" src="images/Cabin.png" alt="Re-Minder VR cabin environment">
+      <img class="slide" src="images/photo.jpg" alt="Re-Minder VR forest environment" style="display:none;">
+      <img class="slide" src="images/Cronch.jpg" alt="Re-Minder VR lake environment" style="display:none;">
+      <img class="slide" src="images/Tree.jpg" alt="Re-Minder VR lake environment" style="display:none;">
+      <img class="slide" src="images/beach.jpg" alt="Re-Minder VR lake environment" style="display:none;">
+      
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<section id="demo-video" class="section demo">
+  <div class="container">
+    <h2>Demo Video</h2>
+    <div class="video-wrapper">
+      <iframe width="800" height="450" src="https://www.youtube.com/embed/twUl2L5pt7A?si=8NkiIDh30DoHbjh8" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
 
     <section id="user-quotes" class="section quotes">
       <div class="container">
@@ -98,31 +131,26 @@
             <img src="images/Team/ElsieProfile.jpg" alt="Elsie Han profile image">
             <h3>Elsie Han</h3>
             <p>jhan14@uw.edu</p>
-            <p>PM/UIUX</p>
           </div>
           <div class="team-member">
             <img src="images/Team/CalvinProfile.jpg" alt="Calvin Tzen profile image">
             <h3>Calvin Tzen</h3>
             <p>nivlac@uw.edu</p>
-            <p>Frontend/Backend Dev</p>
           </div>
           <div class="team-member">
             <img src="images/Team/IreneProfile.png" alt="Irene Jo profile image">
             <h3>Irene Jo</h3>
             <p>irenejo@uw.edu</p>
-            <p>PM/Frontend Dev</p>
           </div>
           <div class="team-member">
             <img src="images/Team/XinyiProfile.png" alt="Xinyi Zhou profile image">
             <h3>Xinyi Zhou</h3>
             <p>xzhou34@uw.edu</p>
-            <p>UIUX/Frontend Dev</p>
           </div>
           <div class="team-member">
             <img src="images/Team/JustinProfile.JPG" alt="Justin Tang profile image">
             <h3>Justin Tang</h3>
             <p>jtan189@uw.edu</p>
-            <p>Frontend/Backend Dev</p>
           </div>
         </div>
       </div>

@@ -37,12 +37,7 @@ body {
   margin: 0 auto;
 }
 
-.hero {
-  background: linear-gradient(to bottom right, var(--blue), var(--green));
-  text-align: center;
-  padding: 6rem 1rem 4rem;
-  color: var(--text);
-}
+
 
 .hero h1 {
   font-family: var(--font-heading);
@@ -253,3 +248,122 @@ body {
     text-align: center;
   }
 }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text);
+}
+
+.hero-video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.slide {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: none;
+}
+
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+
+
+.section.demo h2 {
+  margin-bottom: 2rem; /* reduce space below Demo Video title */
+}
+
+#demo-video {
+  margin-top: 5rem; /* adds space above the entire demo video section */
+}
+
+/* Also reduce margin inside .video-wrapper to bring video closer to title */
+.video-wrapper {
+  margin: 0 0 2rem 0; /* removes top margin, keeps bottom margin */
+}
+
+
+.about-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  flex-wrap: nowrap;
+}
+
+.about-img {
+  width: 35%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .about-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
